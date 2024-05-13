@@ -12,34 +12,38 @@
   <div class="container">
     <header class="container-top">
       <div class="menu">
-       <img src="/images/menu.svg" width="40px" alt="Main Menu"> 
+       <button type="button"><img src="/images/buttons/menu.svg" width="40px" alt="Main Menu"></button> 
       </div>
 
       <div class="top-playlist">
-        <img src="/images/playlist_add.svg" width="40px" atl="Add Playlist">
+        <button type="button"><img src="/images/buttons/playlist_add.svg" width="40px" atl="Add Playlist"></button>
       </div>
     </header>
   
     <main>
-      <div class="container">
+      <div class="music-container">
         <div class="album-img">
-          <img src="/images/album-cover1.jpeg" width="350px" alt="" srcset="">
+          <img src="/images/album-covers/album-cover1.jpeg" width="350px" alt="" srcset="">
         </div>
 
         <div class="playlist-display">
-          <ul id="track-list">
-            <li onclick="loadTrack('audio1.mp3')">1. Intro 3:24</li>
-            <li onclick="loadTrack('audio2.mp3')">2. Things Done Changed</li>
-            <li onclick="loadTrack('audio3.mp3')">3. Gimme the Loot</li>
-            <li onclick="loadTrack('audio3.mp3')">4. Machine Gun Funk</li>
-            <li onclick="loadTrack('audio3.mp3')">5. Warning</li>
-            <li onclick="loadTrack('audio3.mp3')">6. Ready to Die</li>
-            <li onclick="loadTrack('audio3.mp3')">7. One More Chance</li>
+          <ul id="nowPlaying">
+            <li>Intro <span>V</span></li>
+             <ul id="track-list" class="song-list-display">
+              <li>Things Done Changed</li>
+              <li>Gimme the Loot</li>
+              <li>Machine Gun Funk</li>
+              <li>Warning</li>
+              <li>Ready to Die</li>
+              <li>One More Chance</li>
+             </ul>
           </ul>
         </div>
-
+        
         <div class="music-player">
-          <audio src="your-audio-file.mp3" controls></audio>
+          <button type="button" id="skipPreBtn"><img src="/images/buttons/skip_previous.svg" alt="Previous Button" width="60px"></button>
+          <button type="button" id="playBtn"><img src="/images/buttons/play_arrow.svg" alt="Play Button" width="60px"></button>
+          <button type="button" id="skipNextBtn"><img src="/images/buttons/skip_next.svg" alt="Skip Next Button" width="60px"></button>
         </div>
       </div>
     </main>
