@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap Styles -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <script defer src="/js/app.js"></script>
+  <title>Smart Music Player</title>
+</head>
+<body>
+  <div class="container">
+    <header class="container-top">
+      <div class="menu">
+       <img src="/images/menu.svg" width="40px" alt="Main Menu"> 
+      </div>
+
+      <div class="top-playlist">
+        <img src="/images/playlist_add.svg" width="40px" atl="Add Playlist">
+      </div>
+    </header>
+  
+    <main>
+      <div class="container">
+        <div class="album-img">
+          <img src="/images/album-cover1.jpeg" width="350px" alt="" srcset="">
+        </div>
+
+        <div class="playlist-display">
+          <ul id="track-list">
+            <li onclick="loadTrack('audio1.mp3')">1. Intro 3:24</li>
+            <li onclick="loadTrack('audio2.mp3')">2. Things Done Changed</li>
+            <li onclick="loadTrack('audio3.mp3')">3. Gimme the Loot</li>
+            <li onclick="loadTrack('audio3.mp3')">4. Machine Gun Funk</li>
+            <li onclick="loadTrack('audio3.mp3')">5. Warning</li>
+            <li onclick="loadTrack('audio3.mp3')">6. Ready to Die</li>
+            <li onclick="loadTrack('audio3.mp3')">7. One More Chance</li>
+          </ul>
+        </div>
+
+        <div class="music-player">
+          <audio src="your-audio-file.mp3" controls></audio>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
