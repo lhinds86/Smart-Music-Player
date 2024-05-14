@@ -9,35 +9,42 @@
   <title>Smart Music Player</title>
 </head>
 <body>
-  <div class="container">
+  <div class="player-container">
     <header class="container-top">
-      <div class="menu">
+      <button type="button" id="mainNav"><img src="/images/buttons/menu.svg" width="40px" alt="Main Menu"></button>
+      <div class="navContent">
+        <button type="button"><img src="/images/buttons/playlist_add.svg" width="40px" atl="Add Playlist"></button>
+        <button type="button"><img src="/images/buttons/repeat.svg" width="40px" alt="Main Menu"></button>
+        <button type="button"><img src="/images/buttons/replay.svg" width="40px" alt="Main Menu"></button>
+      </div>
+
+
+      <!-- <div class="menu-nav">
        <button type="button"><img src="/images/buttons/menu.svg" width="40px" alt="Main Menu"></button> 
       </div>
 
       <div class="top-playlist">
         <button type="button"><img src="/images/buttons/playlist_add.svg" width="40px" atl="Add Playlist"></button>
-      </div>
+      </div> -->
     </header>
   
     <main>
       <div class="music-container">
         <div class="album-img">
-          <img src="/images/album-covers/album-cover1.jpeg" width="350px" alt="" srcset="">
+          <img src="/images/album-covers/album-cover1.jpeg" width="250px" alt="Album Image" srcset="">
         </div>
 
-        <div class="playlist-display">
-          <ul id="nowPlaying">
-            <li>Intro <span>V</span></li>
-             <ul id="track-list" class="song-list-display">
-              <li>Things Done Changed</li>
-              <li>Gimme the Loot</li>
-              <li>Machine Gun Funk</li>
-              <li>Warning</li>
-              <li>Ready to Die</li>
-              <li>One More Chance</li>
-             </ul>
-          </ul>
+        <div class="playlist">
+          <h2 id="currentTrack">One More Chance</h2>
+          <!-- <ul id="track-list">
+            <li>Intro</li>
+            <li>Things Done Changed</li>
+            <li>Gimme the Loot</li>
+            <li>Machine Gun Funk</li>
+            <li>Warning</li>
+            <li>Ready to Die</li>
+            <li>One More Chance</li>
+          </ul> -->
         </div>
         
         <div class="music-player">
