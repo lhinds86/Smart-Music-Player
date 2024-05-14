@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap Styles -->
   <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://kit.fontawesome.com/ef675286e1.js" crossorigin="anonymous"></script>
   <script defer src="/js/app.js"></script>
   <title>Smart Music Player</title>
 </head>
@@ -17,43 +18,45 @@
         <button type="button"><img src="/images/buttons/repeat.svg" width="40px" alt="Main Menu"></button>
         <button type="button"><img src="/images/buttons/replay.svg" width="40px" alt="Main Menu"></button>
       </div>
-
-
-      <!-- <div class="menu-nav">
-       <button type="button"><img src="/images/buttons/menu.svg" width="40px" alt="Main Menu"></button> 
-      </div>
-
-      <div class="top-playlist">
-        <button type="button"><img src="/images/buttons/playlist_add.svg" width="40px" atl="Add Playlist"></button>
-      </div> -->
     </header>
   
     <main>
-      <div class="music-container">
-        <div class="album-img">
+      <div class="music-container ">
+        <div class="album-img" id="cover">
           <img src="/images/album-covers/album-cover1.jpeg" width="250px" alt="Album Image" srcset="">
         </div>
 
-        <div class="playlist">
-          <h2 id="currentTrack">One More Chance</h2>
-          <!-- <ul id="track-list">
-            <li>Intro</li>
-            <li>Things Done Changed</li>
-            <li>Gimme the Loot</li>
-            <li>Machine Gun Funk</li>
-            <li>Warning</li>
-            <li>Ready to Die</li>
-            <li>One More Chance</li>
-          </ul> -->
+        <h2 id="title">One More Chance</h2>
+
+        <div class="music-info">
+          <div class="progress-container">
+            <div class="progress"></div>
+          </div>
         </div>
+
+        <audio src="" id="audio"></audio>
         
-        <div class="music-player">
-          <button type="button" id="skipPreBtn"><img src="/images/buttons/skip_previous.svg" alt="Previous Button" width="60px"></button>
-          <button type="button" id="playBtn"><img src="/images/buttons/play_arrow.svg" alt="Play Button" width="60px"></button>
-          <button type="button" id="skipNextBtn"><img src="/images/buttons/skip_next.svg" alt="Skip Next Button" width="60px"></button>
+        <div class="player-controls">
+          <button id="prev" class="action-btn">
+            <i class="fas fa-backward"></i>
+          </button>
+          <button id="play" class="action-btn action-btn-big">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="next" class="action-btn">
+            <i class="fas fa-forward"></i>
+          </button>
         </div>
       </div>
     </main>
   </div>
 </body>
 </html>
+
+
+
+<!-- <div class="music-player">
+          <button type="button" id="skipPreBtn"><img src="/images/buttons/skip_previous.svg" alt="Previous Button" width="60px"></button>
+          <button type="button" id="playBtn"><img src="/images/buttons/play_arrow.svg" alt="Play Button" width="60px"></button>
+          <button type="button" id="skipNextBtn"><img src="/images/buttons/skip_next.svg" alt="Skip Next Button" width="60px"></button>
+        </div> -->
