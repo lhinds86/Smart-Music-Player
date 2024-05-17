@@ -20,6 +20,5 @@ Smart Music Player is a sleek and intuitive music player designed to enhance you
 
 ***Launch Smart Music Player.***
 
-***Add your music library to the player.***
+***https://smartmusicplayer.surge.sh***
 
-***Explore and enjoy your favorite tracks with ease!***
