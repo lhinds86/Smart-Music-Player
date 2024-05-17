@@ -23,7 +23,7 @@ let songIndex = 0
 loadSong(songs[songIndex])
 
 //Update song details
-const loadSong = (song) => {
+function loadSong(song) {
   title.innerText = song
   audio.src = `/music/${song}.mp3`
   cover.src = `/images/album-covers/${song}.jpeg`
