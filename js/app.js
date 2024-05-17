@@ -12,7 +12,7 @@ const title = document.getElementById('title')
 const cover = document.getElementById('cover')
 
 //Songs 
-const songs = ['B.I.G - One More Chance', ' B.I.G - Juicy', '2Pac - Ambitionz Az A Ridah', '2Pac - Picture Me Rollin']
+const songs = ['B.I.G - One More Chance', 'B.I.G - Juicy', '2Pac - Ambitionz Az A Ridah', '2Pac - Picture Me Rollin']
 
 
 
@@ -23,20 +23,20 @@ let songIndex = 0
 loadSong(songs[songIndex])
 
 //Update song details
-function loadSong(song) {
+const loadSong = (song) => {
   title.innerText = song
   audio.src = `/music/${song}.mp3`
   cover.src = `/images/album-covers/${song}.jpeg`
 }
-//Play / Pause
-function playSong() {
+//Play / Pause button
+const playSong = () => {
   musicContainer.classList.add('play')
   playBtn.querySelector('i.fas').classList.remove('fa-play')
   playBtn.querySelector('i.fas').classList.add('fa-pause')
 
   audio.play()
 }
-function pauseSong() {
+const pauseSong = () => {
   musicContainer.classList.remove('play')
   playBtn.querySelector('i.fas').classList.add('fa-play')
   playBtn.querySelector('i.fas').classList.remove('fa-pause')
@@ -53,7 +53,7 @@ playBtn.addEventListener('click', () => {
 })
 
 // Previous song
-function prevSong() {
+const prevSong = () => {
   songIndex--
   if (songIndex < 0) {
     songIndex = songs.length - 1
@@ -63,7 +63,7 @@ function prevSong() {
 }
 
 // Next song
-function nextSong() {
+const nextSong = () => {
   songIndex++
   if (songIndex > songs.length - 1) {
     songIndex = 0
@@ -73,7 +73,7 @@ function nextSong() {
 }
 
 //Progress Bar
-function updateProgress(e) {
+const updateProgress = (e) => {
   const { duration, currentTime } = e.srcElement
   const progressPercent = (currentTime / duration) * 100
   progress.style.width = `${progressPercent}%`
@@ -83,7 +83,8 @@ function updateProgress(e) {
 }
 audio.addEventListener('timeupdate', updateProgress)
 
-function setProgress(e) {
+// User progress bar input
+const setProgress = (e) => {
   const width = this.clientWidth
   const clickX = e.offsetX
   const duration = audio.duration
@@ -91,6 +92,6 @@ function setProgress(e) {
 }
 progressContainer.addEventListener('click', setProgress)
 
-// Change song
+// Skip Buttons
 prevBtn.addEventListener('click', prevSong)
 nextBtn.addEventListener('click', nextSong)
