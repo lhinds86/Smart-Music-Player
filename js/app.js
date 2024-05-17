@@ -12,7 +12,7 @@ const title = document.getElementById('title')
 const cover = document.getElementById('cover')
 
 //Songs 
-const songs = ['B.I.G - One More Chance', 'B.I.G - Juicy', '2Pac - Ambitionz Az A Ridah', '2Pac - Picture Me Rollin']
+const songs = ['B.I.G - One More Chance', ' B.I.G - Juicy', '2Pac - Ambitionz Az A Ridah', '2Pac - Picture Me Rollin']
 
 
 
@@ -29,14 +29,14 @@ function loadSong(song) {
   cover.src = `/images/album-covers/${song}.jpeg`
 }
 //Play / Pause button
-const playSong = () => {
+function playSong() {
   musicContainer.classList.add('play')
   playBtn.querySelector('i.fas').classList.remove('fa-play')
   playBtn.querySelector('i.fas').classList.add('fa-pause')
 
   audio.play()
 }
-const pauseSong = () => {
+function pauseSong() {
   musicContainer.classList.remove('play')
   playBtn.querySelector('i.fas').classList.add('fa-play')
   playBtn.querySelector('i.fas').classList.remove('fa-pause')
@@ -53,7 +53,7 @@ playBtn.addEventListener('click', () => {
 })
 
 // Previous song
-const prevSong = () => {
+function prevSong() {
   songIndex--
   if (songIndex < 0) {
     songIndex = songs.length - 1
@@ -63,7 +63,7 @@ const prevSong = () => {
 }
 
 // Next song
-const nextSong = () => {
+function nextSong() {
   songIndex++
   if (songIndex > songs.length - 1) {
     songIndex = 0
@@ -73,7 +73,7 @@ const nextSong = () => {
 }
 
 //Progress Bar
-const updateProgress = (e) => {
+function updateProgress(e) {
   const { duration, currentTime } = e.srcElement
   const progressPercent = (currentTime / duration) * 100
   progress.style.width = `${progressPercent}%`
@@ -84,7 +84,7 @@ const updateProgress = (e) => {
 audio.addEventListener('timeupdate', updateProgress)
 
 // User progress bar input
-const setProgress = (e) => {
+function setProgress(e)  {
   const width = this.clientWidth
   const clickX = e.offsetX
   const duration = audio.duration
